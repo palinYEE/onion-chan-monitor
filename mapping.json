@@ -1,0 +1,41 @@
+{
+    "mappings":{
+        "properties":{
+            "onion" :{
+                "type":"keyword"
+            },
+            "title" :{
+                "type":"keyword"
+            },
+            "writer" :{
+                "type":"keyword"
+            },
+            "date"  :{
+                "type":"date",
+                "format" : "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+            },
+            "contents" :{
+                "type":"keyword"
+            },
+            "comment"   : {
+                "properties": {
+                    "writer" : {
+                        "type":"keyword"
+                    },
+                    "date"   : {
+                        "type": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                    },
+                    "contents" : {
+                        "type":"keyword"
+                    },
+                }
+            },    
+            "checkonoff" :{
+                "type":"keyword"
+            },
+            "hash":{
+                "type" : "keyword"
+            }
+        }
+    }
+}
